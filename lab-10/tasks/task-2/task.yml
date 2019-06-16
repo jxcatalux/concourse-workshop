@@ -1,0 +1,13 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: ubuntu
+    tag: latest
+
+inputs:
+- name: my-github-repo
+
+run:
+  path: my-github-repo/lab-10/tasks/task-2/run.sh
