@@ -1,0 +1,20 @@
+---
+resources:
+- name: my-github-repo
+  type: git
+  source:
+    uri: https://github.com/pivotal-jamil-shamy/concourse-workshop.git
+    branch: master
+
+jobs:
+- name: job-9
+  public: false
+  plan:
+  - get: my-github-repo
+    trigger: true
+  - task: task-1
+    file: my-github-repo/lab-9/tasks/task-1/task.yml
+  - task: task-2
+    file: my-github-repo/lab-9/tasks/task-2/task.yml
+  - task: task-3
+    file: my-github-repo/lab-9/tasks/task-3/task.yml
