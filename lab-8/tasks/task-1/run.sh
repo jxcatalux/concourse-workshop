@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 echo "================================"
-echo "I am in the script"
+echo "I am in the script, that was pushed to Github"
 
-ls -ltR
+ls -lR
 
 echo "I am done"
 echo "================================"

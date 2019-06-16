@@ -1,0 +1,22 @@
+resources:
+- name: every-30-seconds
+  type: time
+  source: 
+    interval: 30s
+
+jobs:
+- name: periodic-job
+  plan:
+  - get: every-30-seconds
+    trigger: true
+  - task: periodic-task
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: ubuntu
+      run:
+        path: echo
+        args:
+        - hello world concourse 101
