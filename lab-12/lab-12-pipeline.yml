@@ -19,6 +19,7 @@ jobs:
   plan:
   - get: my-github-repo
     passed: [request-environment]
+    trigger: true
   - task: task-2
     file: my-github-repo/lab-12/tasks/task-2/task.yml
 - name: provision-networks
@@ -26,6 +27,7 @@ jobs:
   plan:
   - get: my-github-repo
     passed: [request-environment]
+    trigger: true
   - task: task-3
     file: my-github-repo/lab-12/tasks/task-3/task.yml
 - name: create-vms
@@ -33,6 +35,7 @@ jobs:
   plan:
   - get: my-github-repo
     passed: [create-os-images, provision-networks]
+    trigger: true
   - task: task-4
     file: my-github-repo/lab-12/tasks/task-4/task.yml
 - name: publish-environment-details
@@ -40,5 +43,6 @@ jobs:
   plan:
   - get: my-github-repo
     passed: [create-vms]
+    trigger: true
   - task: task-5
     file: my-github-repo/lab-12/tasks/task-5/task.yml
