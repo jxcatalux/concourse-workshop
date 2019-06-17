@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "================================"
-echo "I am a task that will create some files and put them in the putput folder"
+echo "I am a task that will create some files and put them in the output folder"
 
 sleep 10
 
