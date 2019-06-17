@@ -1,0 +1,16 @@
+---
+resources:
+- name: my-github-repo
+  type: git
+  source:
+    uri: https://github.com/pivotal-jamil-shamy/concourse-workshop.git
+    branch: master
+
+jobs:
+- name: windows-job
+  public: false
+  plan:
+  - get: my-github-repo
+    trigger: true
+  - task: windows-task
+    file: my-github-repo/lab-13/tasks/task-1/task.yml

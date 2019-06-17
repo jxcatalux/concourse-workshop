@@ -1,0 +1,11 @@
+---
+platform: windows
+
+inputs:
+- name: my-github-repo
+
+run:
+  path: powershell
+  args:
+  - "-File"
+  - "my-github-repo/lab-13/tasks/task-1/run.ps1"
