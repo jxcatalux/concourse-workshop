@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# With code from https://github.com/wfernandes/vault-resource 
+
+set -Eeuo pipefail
+
+exec 3>&1 # make stdout available as fd 3 for the result
+exec 1>&2 # redirect all output to stderr for logging
+
+
+payload="/tmp/youtube-resource-request"
+cat > "$payload" <&0
+
+video_to_get=$(jq -r '.version.id // ""' < "$payload")
+
+echo '{
+  "version": {
+    "id": "'"$video_to_get"'"
+  }
+}' >&3
