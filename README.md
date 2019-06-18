@@ -118,7 +118,7 @@ You may not be able to run this lab from a Windows machine. We'll demo it it fro
 
 Linux:
 ```
-fly -t lab execute -c task-1.yml -i my-input-6=./dir-containing-script
+fly -t lab execute -c task-1.yml -i my-input-5=./dir-containing-script
 ```
 
 ---
