@@ -7,7 +7,7 @@
 
 ---
 ## Lab 0: Setup
-1. Visit (URL) . The website will present a self signed certificate, please accept the exception accordingly depending on the browser you are using.
+1. Visit https://concourse-workshop-toronto.ci.cf-app.com/ . The website will present a self signed certificate, please accept the exception accordingly depending on the browser you are using.
 1. On the main page, you will see a link where you can download a CLI (Command Line Interface) that we will be using in the labs. Click on the icon corresponding to the OS you are currently using to download it. 
    - The CLI for concourse is named `fly`. Depending on the OS you are using, move this binary into the `PATH` of your shell. Or, you can keep it for now in a directory of your choice, and always reference it from there.
 1. You will each be handed a piece of paper that has a username and password on it. Please try to login to the webapp to verify that your username and password works.
@@ -22,12 +22,12 @@ In the terminal, run the following command to login:
 
 Linux:
 ```bash
-$ fly -t lab login -c <URL> --team-name=<your-team> --username=<your-username> --password=<your-password> -k
+$ fly -t lab login -c https://concourse-workshop-toronto.ci.cf-app.com/ --team-name=<your-team> --username=<your-username> --password=<your-password> -k
 ```
 
 Windows (Powershell):
 ```powershell
-fly.exe login /t lab /c <URL> /team-name:<your-team> /username:<your-user-name> /password:<your-password> /k
+fly.exe login /t lab /c https://concourse-workshop-toronto.ci.cf-app.com/ /team-name:<your-team> /username:<your-user-name> /password:<your-password> /k
 ```
 
 After logging in successfully, you should be able to run the `userinfo` command:
