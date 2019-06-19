@@ -1,0 +1,19 @@
+---
+resources:
+- name: my-github-repo
+  type: git
+  source:
+    uri: https://github.com/pivotal-jamil-shamy/concourse-workshop.git
+    branch: master
+
+jobs:
+- name: test
+  public: false
+  plan:
+  - get: my-github-repo
+    trigger: true
+  - task: task-1
+    file: my-github-repo/lab-15/tasks/task-1/task.yml
+    params:
+      DEMO_PARAM: vroom vroom
+      DB_VERSION: "10.8.66"
