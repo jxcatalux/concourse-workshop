@@ -8,7 +8,7 @@ image_resource:
 
 inputs:
 - name: my-github-repo
-- name: sample-list
+- name: jamil-playlist
 
 run:
   path: my-github-repo/lab-14/tasks/task-1/run.sh
