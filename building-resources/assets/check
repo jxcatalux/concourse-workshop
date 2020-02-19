@@ -19,6 +19,6 @@ if [ -z "$playlist_url" ]; then
   exit 1
 fi
 
-latest_video_id=$(youtube-dl -j --flat-playlist "$playlist_url" | jq -r '.id' | tail -1)
+latest_video_id=$(youtube-dl -j --restrict-filenames --flat-playlist "$playlist_url" | jq -r '.id' | tail -1)
 
 echo '{"id": "'"$latest_video_id"'"}' | jq --slurp . >&3
