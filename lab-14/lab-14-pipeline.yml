@@ -4,7 +4,7 @@ resource_types:
   type: docker-image
   source:
     repository: jamlo/concourse-workshop
-    tag: 3.0
+    tag: "3.0"
 
 resources:
 - name: my-github-repo
