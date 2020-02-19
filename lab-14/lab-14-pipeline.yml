@@ -1,7 +1,7 @@
 ---
 resource_types:
 - name: youtube
-  type: docker-image
+  type: registry-image
   source:
     repository: jamlo/concourse-workshop
     tag: "3.0"
