@@ -22,12 +22,12 @@ In the terminal, run the following command to login:
 
 Linux:
 ```bash
-$ fly -t lab login -c https://concourse-workshop-toronto.ci.cf-app.com/ --team-name=<your-team> --username=<your-username> --password=<your-password> -k
+$ fly -t lab login -k -c https://concourse-workshop-toronto.ci.cf-app.com/ --team-name=<your-team> --username=<your-username> --password=<your-password>
 ```
 
 Windows (Powershell):
 ```powershell
-fly.exe login /t lab /c https://concourse-workshop-toronto.ci.cf-app.com/ /team-name:<your-team> /username:<your-user-name> /password:<your-password> /k
+fly.exe login /k /t lab /c https://concourse-workshop-toronto.ci.cf-app.com/ /team-name:<your-team> /username:<your-user-name> /password:<your-password>
 ```
 
 After logging in successfully, you should be able to run the `userinfo` command:
