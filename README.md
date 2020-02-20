@@ -254,3 +254,9 @@ fly.exe -t lab set-pipeline /p lab-13-pipeline /c lab-13-pipeline.yml
 ```
 
 Check the output of the powershell script in the UI.
+
+
+---
+## Appendix: Push to CF 
+
+Navigate to https://github.com/pivotal-jamil-shamy/my-springboot-app
